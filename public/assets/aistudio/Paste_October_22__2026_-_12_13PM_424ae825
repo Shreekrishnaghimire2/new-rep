@@ -1,0 +1,1320 @@
+# SKG ENTERPRISES — Complete Master Website Development Prompt
+
+**Document type:** Master project specification and implementation instructions  
+**Version:** 1.0  
+**Date:** October 2026  
+**Project:** SKG ENTERPRISES Official Website  
+**Primary objective:** Build a premium, trustworthy, human-friendly, bilingual business website that generates qualified project inquiries and establishes the SKG ENTERPRISES brand.
+
+---
+
+# 1. YOUR ROLE
+
+Act as a senior multidisciplinary website development team consisting of:
+
+- Senior UI/UX designer
+- Brand and visual identity designer
+- Frontend developer
+- Backend and integration specialist, only where necessary
+- SEO specialist
+- Web performance engineer
+- Accessibility specialist
+- Security-minded developer
+- Quality assurance engineer
+- Conversion optimization specialist
+
+Your responsibility is to plan, implement, test, and document a professional website for SKG ENTERPRISES.
+
+Do not merely create an attractive mockup. Build a usable, responsive, accessible, maintainable, and production-oriented website with functional features.
+
+Work methodically. Prioritize business outcomes, clarity, quality, and reliability over unnecessary complexity.
+
+**Important:** This prompt is the complete project specification. Follow it throughout development, but inspect the existing project and request approval when a significant unresolved decision or potentially destructive change requires it.
+
+---
+
+# 2. PROJECT CONTEXT AND BUSINESS OBJECTIVES
+
+## 2.1 Business identity
+
+- Business name: SKG ENTERPRISES
+- Short brand name: SKG
+- Primary market: Nepal
+- Additional market: International clients
+- Business stage: Starting from scratch
+- Primary conversion goal: Qualified project inquiries
+- Secondary goals:
+  - Establish a credible digital presence.
+  - Communicate services clearly.
+  - Demonstrate capabilities through genuine work and concept demonstrations.
+  - Attract suitable clients and potential collaborators.
+  - Build a foundation for future products and services.
+  - Support future business growth without requiring a complete redesign.
+
+The business intends to work in areas such as website development, custom digital solutions, AI development, and workflow automation. The exact scope of currently deliverable services must be confirmed rather than assumed.
+
+Do not invent the company's history, team size, office locations, customer list, years of experience, awards, certifications, client results, revenue, or professional achievements.
+
+## 2.2 Target audiences
+
+Design the website for:
+
+- Startups
+- Small and medium-sized businesses
+- Established enterprises
+- Local Nepali businesses
+- International businesses
+- Individuals and entrepreneurs
+- Potential collaborators and partners
+
+Visitors may have limited technical knowledge. Explain services in clear, business-focused language rather than relying on technical jargon.
+
+## 2.3 Core business journey
+
+The ideal visitor journey is:
+
+1. Discover the website.
+2. Understand what SKG ENTERPRISES does.
+3. Identify a service relevant to their needs.
+4. Review genuine projects, demos, or examples.
+5. Understand the working process.
+6. Click **Discuss Your Project**.
+7. Submit an inquiry through a real contact workflow.
+8. Receive accurate confirmation that the inquiry was received.
+9. Allow the business to review and respond to the inquiry.
+
+Every important design and implementation decision should support this journey.
+
+---
+
+# 3. BRAND POSITIONING AND MESSAGING
+
+## 3.1 Brand personality
+
+The brand should feel:
+
+- Professional
+- Modern
+- Innovative
+- Intelligent
+- Approachable
+- Human-centered
+- Reliable
+- Curious
+- Practical
+- Forward-looking
+- Transparent
+
+The website should communicate that SKG combines technology with practical problem-solving.
+
+Avoid making the brand feel cold, robotic, excessively corporate, or like a generic AI-generated agency template.
+
+## 3.2 Core positioning
+
+Position SKG ENTERPRISES as a technology-focused business exploring and delivering practical digital experiences, software solutions, AI-powered capabilities, and workflow automation.
+
+The message should focus on helping clients solve real problems, improve processes, and move their businesses forward.
+
+## 3.3 Suggested hero headline
+
+**Turning Ideas Into Intelligent Digital Solutions.**
+
+Suggested supporting copy:
+
+"We explore and build practical digital experiences, AI-powered solutions, and automation that help businesses move forward."
+
+Primary CTA:
+
+**Discuss Your Project**
+
+Secondary CTA:
+
+**Explore Our Work**
+
+These are the preferred starting points. Improve the copy if research or usability testing demonstrates a meaningful improvement, but preserve the intended brand positioning.
+
+## 3.4 Brand communication rules
+
+- Use plain, confident, natural language.
+- Be specific about what a service does.
+- Explain business benefits without guaranteeing results.
+- Avoid buzzword-heavy copy.
+- Avoid exaggerated claims such as "revolutionary," "industry-leading," or "guaranteed success" unless demonstrably justified.
+- Do not invent testimonials, customer logos, ratings, statistics, or case studies.
+- Do not imply that a service is fully available if it is only an idea or under development.
+- Clearly distinguish available services, experimental capabilities, and concept demonstrations.
+- Use honest language that builds trust over time.
+
+---
+
+# 4. LOGO AND VISUAL IDENTITY
+
+## 4.1 Existing logo concept
+
+The established visual direction for the logo is:
+
+- Dark charcoal or near-black background.
+- Large stylized **SKG** monogram.
+- Electric-blue-to-cyan gradient on the monogram.
+- Orange/gold diagonal or chevron accent integrated into the letter K.
+- Widely spaced white **ENTERPRISES** text underneath.
+- Tagline: **IDEAS → TECHNOLOGY → IMPACT**
+- White tagline text with orange directional accents.
+
+Treat this as the approved design direction to work from, not as proof that a production-ready vector logo already exists.
+
+If logo files are available, inspect and reuse the best existing asset. Do not silently replace the identity with an unrelated logo.
+
+If the source logo is only a raster image, preserve it and document whether a vector version is required.
+
+## 4.2 Required logo variants
+
+Prepare or accommodate these variants when source assets and project scope permit:
+
+1. Primary logo for dark backgrounds.
+2. Logo suitable for light backgrounds.
+3. Simplified brand icon for favicon and small spaces.
+4. Transparent-background logo.
+5. Scalable SVG or other suitable vector version, if available or approved for creation.
+
+Do not fabricate a claim that an asset is a genuine vector master if it is merely an embedded raster image.
+
+## 4.3 Visual design direction
+
+Use the following finalized visual direction:
+
+**Premium futuristic dark navy with electric blue, cyan, and gold accents.**
+
+The website should feel premium and contemporary without sacrificing readability, usability, speed, or trust.
+
+### Core color palette
+
+| Purpose | Color | Hex |
+|---|---|---|
+| Primary background | Deep navy | `#071426` |
+| Primary accent | Electric blue | `#087BFF` |
+| Secondary accent | Cyan | `#21D4F4` |
+| Highlight/accent | Orange-gold | `#FFAA18` |
+| Primary light text | White | `#FFFFFF` |
+| Secondary text | Soft slate | Choose an accessible, readable shade |
+| Light surface | White or a subtle neutral | Choose according to component needs |
+
+Use the palette consistently. Verify foreground/background contrast instead of assuming every combination is accessible.
+
+### Typography
+
+Prefer a clean, modern typeface such as:
+
+- Inter
+- Manrope
+- Another well-supported sans-serif with comparable readability
+
+Use a clear hierarchy for headings, body text, labels, navigation, and buttons.
+
+Avoid excessively small text, unnecessarily thin fonts, long lines, and inconsistent heading sizes.
+
+### Visual elements
+
+Use:
+
+- Strong typography
+- Generous whitespace
+- Clear visual hierarchy
+- Refined cards and surfaces
+- Subtle borders and gradients
+- Purposeful geometric patterns
+- Abstract network or technology-inspired visuals
+- Restrained shadows and lighting
+- Consistent spacing
+- Subtle, purposeful transitions
+
+The hero may use a custom abstract geometric or network-inspired visual that communicates connected ideas and technology.
+
+Prefer lightweight SVG or CSS visuals where appropriate.
+
+Avoid:
+
+- Excessive neon glow
+- Unnecessary 3D scenes
+- Heavy autoplay video
+- Large unoptimized background images
+- Constant animations
+- Generic stock photos that add no meaning
+- Excessive glassmorphism
+- Random gradients on every component
+- Decorative elements that obscure content
+- Visual effects that harm performance or accessibility
+
+---
+
+# 5. USER EXPERIENCE PRINCIPLES
+
+The website must be:
+
+- Easy to understand
+- Easy to navigate
+- Responsive on mobile, tablet, laptop, and desktop
+- Visually consistent
+- Accessible to users with different abilities
+- Fast to load
+- Focused on the main business objective
+- Straightforward to maintain
+
+## 5.1 Navigation
+
+Use a clean navigation system containing:
+
+- SKG logo
+- Home
+- Services
+- Projects
+- About
+- Contact
+- English/Nepali language switch
+- Primary CTA: Discuss Your Project
+
+Adapt the navigation for smaller screens using an accessible mobile menu.
+
+Do not add pages or navigation links merely to make the business appear larger.
+
+## 5.2 Calls to action
+
+Use **Discuss Your Project** as the main conversion action throughout the website.
+
+Use **Explore Our Work** as a secondary action where appropriate.
+
+Other actions may include viewing services, opening a genuine project, or contacting the business through a verified channel.
+
+Primary and secondary actions must have a clear visual hierarchy.
+
+Every button and link must perform its advertised action. Do not leave decorative buttons, dead links, or fake interactions.
+
+## 5.3 Motion and interaction
+
+Animations should communicate state, guide attention, or improve the experience.
+
+Requirements:
+
+- Keep animations short and subtle.
+- Avoid blocking the user from interacting with the page.
+- Respect reduced-motion preferences.
+- Do not rely on animation to reveal essential information.
+- Avoid scroll-jacking and unnecessary parallax.
+- Ensure the website remains usable if animation is disabled.
+
+---
+
+# 6. WEBSITE ARCHITECTURE AND HOMEPAGE SECTIONS
+
+For the initial release, prioritize one polished homepage with clearly organized sections.
+
+Use separate pages only when they deliver a real user or business benefit.
+
+## Section 1: Header and navigation
+
+Include:
+
+- Brand logo
+- Main navigation
+- Language switch
+- Primary project inquiry CTA
+- Responsive mobile navigation
+
+Requirements:
+
+- Clear focus states
+- Keyboard accessibility
+- Correct navigation targets
+- Appropriate mobile spacing
+- No hidden or inaccessible controls
+
+## Section 2: Hero
+
+Include:
+
+- Clear headline
+- Short supporting statement
+- Primary CTA: Discuss Your Project
+- Secondary CTA: Explore Our Work
+- Custom technology-inspired visual
+
+The hero must quickly communicate:
+
+1. What SKG ENTERPRISES does.
+2. Who it helps.
+3. What the visitor should do next.
+
+Do not put every service, feature, or marketing message into the hero.
+
+## Section 3: Services
+
+Organize services into three understandable groups.
+
+### Group A: Websites and Digital Experiences
+
+Potential offerings:
+
+- Business websites
+- Landing pages
+- Website redesigns
+- Digital experiences
+- Website optimization
+
+Only claim delivery capabilities that can actually be supported.
+
+### Group B: AI and Workflow Automation
+
+Potential offerings:
+
+- AI-powered business solutions
+- Workflow automation
+- Process automation
+- Chatbots and conversational interfaces
+- Integrations between suitable business tools
+
+Clearly distinguish available implementation services from concepts or capabilities still being explored.
+
+### Group C: Custom Digital Solutions
+
+Potential offerings:
+
+- Custom software
+- Business-focused digital tools
+- Application development
+- Technology consulting or solution planning
+
+Do not imply that every possible technology or solution is currently available.
+
+Each service card should contain:
+
+- A meaningful title
+- A short, understandable description
+- A business-oriented benefit
+- An appropriate visual or icon
+- A relevant action, where useful
+
+Avoid vague claims and excessively technical descriptions.
+
+## Section 4: Projects and portfolio
+
+Show real work, useful demonstrations, or clearly labeled concept projects.
+
+Each project entry may include:
+
+- Project name
+- Project category
+- Preview image or live demonstration
+- Problem or objective
+- What was built
+- Technologies used, if relevant
+- Verified outcomes, when available
+- Link to the actual project, if available
+
+Rules:
+
+- Never invent client names.
+- Never invent customer testimonials.
+- Never invent business results.
+- Never imply a concept project was commissioned by a real customer.
+- Label demonstrations and experimental projects accurately.
+- If no suitable projects exist yet, create an honest, well-designed empty state or a clearly labeled concept demonstration.
+- Make the section easy to update as real work becomes available.
+
+Do not fill the portfolio with meaningless placeholder cards simply to make the website appear complete.
+
+## Section 5: Working process
+
+Explain the process through four clear stages:
+
+1. **Discover** — Understand the problem, audience, and business goals.
+2. **Plan** — Define the scope, approach, requirements, and priorities.
+3. **Build** — Develop and validate the agreed solution.
+4. **Improve** — Refine the solution based on testing, feedback, and actual needs.
+
+Keep descriptions concise and honest.
+
+Do not promise a delivery timeline before project requirements are understood.
+
+## Section 6: About SKG ENTERPRISES
+
+Communicate:
+
+- The business's technology-focused direction
+- Its practical approach to solving problems
+- Its interest in useful digital experiences and intelligent solutions
+- Its commitment to transparency and continuous improvement
+- Its focus on understanding client needs
+
+Do not fabricate a company history, team biography, founder achievements, qualifications, awards, or years of experience.
+
+Use genuine information only.
+
+## Section 7: Project inquiry and contact
+
+Make contacting the business straightforward.
+
+Include:
+
+- A clear invitation to discuss a project
+- A usable inquiry form
+- Verified contact information when available
+- Verified social links when available
+- A clear success and error experience
+- Relevant privacy information
+
+Do not invent email addresses, phone numbers, WhatsApp links, physical addresses, or social media profiles.
+
+If required contact details are unavailable, use clearly documented configuration placeholders during development and identify them as launch blockers.
+
+## Section 8: Footer
+
+Include:
+
+- Brand logo
+- Short business description
+- Navigation links
+- Service links or section links
+- Verified contact channels
+- Verified social profiles
+- Privacy notice or policy link, where applicable
+- Copyright information
+
+Do not include empty social icons, broken links, fabricated contact information, or unnecessary footer clutter.
+
+A future products area may be added when genuine products exist. Do not create a prominent, empty product section merely to imply that products are already available.
+
+---
+
+# 7. PRIMARY CONVERSION STRATEGY
+
+The website's main objective is to generate qualified project inquiries.
+
+## Requirements
+
+- Make the primary CTA obvious.
+- Place appropriate CTA links in the hero, relevant service areas, and contact section.
+- Keep secondary actions visually subordinate.
+- Help users understand what happens after they submit an inquiry.
+- Keep the form focused and easy to complete.
+- Avoid intrusive popups.
+- Avoid fake countdowns and artificial urgency.
+- Avoid exaggerated guarantees.
+- Avoid collecting unnecessary personal information.
+
+The website should encourage suitable inquiries, not maximize clicks at the expense of trust.
+
+## Future measurement
+
+When a privacy-appropriate analytics setup is justified, consider tracking:
+
+- Page visits
+- Primary CTA clicks
+- Contact form starts
+- Successful submissions
+- Form errors
+- Relevant language selection events
+
+Do not install unnecessary tracking tools or collect more data than needed.
+
+---
+
+# 8. REAL CONTACT FORM AND MESSAGE DELIVERY
+
+This is a critical production requirement.
+
+A visually attractive form is not sufficient. The form must actually deliver inquiries through a configured, trustworthy processing service.
+
+## 8.1 Required fields
+
+Required:
+
+- Name
+- Email
+- Project description
+
+Optional:
+
+- Service category
+- Budget range
+- Expected timeline
+
+Do not require optional information merely to make the form appear more comprehensive.
+
+## 8.2 Form behavior
+
+Implement:
+
+- Accessible field labels
+- Appropriate input types
+- Client-side validation
+- Server-side or trusted-service validation
+- Clear validation messages
+- Loading state
+- Duplicate-submission prevention
+- Spam protection appropriate to the chosen service
+- Safe processing of submitted content
+- Success state only after the service confirms receipt
+- Clear failure state
+- A retry path
+- Keyboard accessibility
+- Mobile-friendly controls
+
+Use appropriate validation without being unnecessarily restrictive.
+
+Never render untrusted user input as executable HTML.
+
+## 8.3 Real delivery
+
+Inspect available integrations and configuration before choosing a solution.
+
+Prefer a reliable, low-maintenance form-processing or serverless solution appropriate to the chosen architecture.
+
+Do not introduce a custom backend, database, or account system unless there is a genuine need.
+
+If credentials, API keys, verified email destinations, or service configuration are missing:
+
+1. Do not invent credentials.
+2. Do not expose secrets in frontend code.
+3. Do not pretend the form is connected.
+4. Implement what can safely be implemented.
+5. Clearly identify the missing configuration.
+6. Document the exact steps needed to complete the integration.
+7. Test the integration once valid configuration is available.
+
+Never show a success message before the processing service confirms that the submission was received.
+
+A simulated success is acceptable only in a clearly labeled prototype and must never be represented as real message delivery.
+
+## 8.4 Privacy
+
+Collect only the information required to respond to inquiries.
+
+Explain how submitted information will be used and handled.
+
+Do not promise a retention period, privacy guarantee, or data-processing arrangement unless it has actually been established.
+
+---
+
+# 9. COMPLETE ENGLISH AND NEPALI EXPERIENCE
+
+The website must support both English and Nepali.
+
+## 9.1 Language switch
+
+Provide a clear English/Nepali language switch in the navigation.
+
+Requirements:
+
+- Switching languages must update the actual content.
+- Preserve the selected language while the visitor navigates or interacts with the page, using an appropriate lightweight approach.
+- Set the document language correctly.
+- Ensure translated text fits smaller screens.
+- Avoid awkward machine-translated wording where accurate wording can be produced.
+- Keep labels, navigation, and controls understandable in both languages.
+
+## 9.2 Translate the complete user experience
+
+Both languages must cover:
+
+- Navigation
+- Hero headline
+- Hero description
+- CTA labels
+- Service titles and descriptions
+- Project labels and descriptions
+- Working process
+- About section
+- Contact section
+- Form labels and placeholders
+- Validation messages
+- Loading messages
+- Success messages
+- Error and retry messages
+- Footer
+- Privacy-related interface text
+- Relevant metadata and page titles
+
+Do not translate only the hero while leaving the rest of the interface in English.
+
+## 9.3 SEO and language strategy
+
+For the MVP, a lightweight client-side language switch may be acceptable.
+
+However, understand that a client-side-only translation approach may not provide the best search discoverability for both languages.
+
+If bilingual organic search becomes an important objective, consider language-specific URLs, localized metadata, and appropriate alternate-language annotations.
+
+Do not add complicated routing solely for appearance. Choose an approach that fits the actual requirements and document its limitations.
+
+---
+
+# 10. SEO REQUIREMENTS
+
+Build a solid technical and on-page SEO foundation.
+
+## 10.1 Metadata
+
+Implement appropriate:
+
+- Page title
+- Meta description
+- Canonical URL
+- Open Graph metadata
+- Social-sharing metadata
+- Favicon
+- Relevant language metadata
+
+Use the actual production domain when it is confirmed.
+
+Do not invent a domain or publish a placeholder canonical URL as though it were final.
+
+## 10.2 Semantic structure
+
+Use:
+
+- Semantic HTML elements
+- One clear primary page heading
+- Logical heading hierarchy
+- Descriptive link text
+- Meaningful image alt text
+- Accessible form labels
+- Appropriate page landmarks
+
+Avoid keyword stuffing.
+
+## 10.3 Technical SEO
+
+Where appropriate for the chosen architecture, prepare:
+
+- `robots.txt`
+- XML sitemap
+- Correct indexing directives
+- Canonical URLs
+- Valid internal links
+- Appropriate redirects when required
+- Social preview images
+- Structured data based only on verified business information
+
+Do not add fabricated ratings, reviews, addresses, opening hours, or business details to structured data.
+
+Do not accidentally block the production website from search engines.
+
+Do not index development, staging, or localhost URLs.
+
+## 10.4 Launch SEO verification
+
+After the production domain is configured:
+
+- Check canonical URLs.
+- Check the sitemap.
+- Check robots directives.
+- Verify metadata.
+- Inspect internal links.
+- Verify the final indexing configuration.
+- Set up Google Search Console if the business chooses to use it.
+- Document any remaining SEO limitations.
+
+Do not guarantee search rankings, immediate indexing, or traffic.
+
+---
+
+# 11. PERFORMANCE AND CORE WEB VITALS
+
+Performance is a core requirement, not an optional polish step.
+
+## 11.1 Targets
+
+Aim for the following Core Web Vitals thresholds at the 75th percentile where real-user measurement is available:
+
+- Largest Contentful Paint (LCP): **2.5 seconds or less**
+- Interaction to Next Paint (INP): **200 milliseconds or less**
+- Cumulative Layout Shift (CLS): **0.1 or less**
+
+These are goals, not pre-existing achievements. Do not claim they have been met without suitable measurement.
+
+## 11.2 Implementation practices
+
+- Keep the frontend lightweight.
+- Avoid unnecessary dependencies.
+- Optimize and appropriately size images.
+- Prefer modern image formats where supported.
+- Specify image dimensions or aspect ratios to reduce layout shifts.
+- Lazy-load below-the-fold images where appropriate.
+- Do not unnecessarily lazy-load the primary hero image if doing so harms its loading performance.
+- Avoid heavy animation libraries when simple CSS is sufficient.
+- Minimize unnecessary JavaScript.
+- Avoid excessive client-side rendering when a simpler approach works.
+- Use fonts responsibly and avoid excessive font weights.
+- Prevent layout shifts during loading.
+- Avoid unnecessary network requests.
+- Keep mobile performance in mind from the beginning.
+
+Measure performance using suitable tools before making final claims.
+
+---
+
+# 12. ACCESSIBILITY
+
+Aim for **WCAG 2.2 Level AA**.
+
+## Requirements
+
+- Full keyboard navigation
+- Visible keyboard focus
+- Logical focus order
+- Accessible navigation menus
+- Proper heading hierarchy
+- Sufficient text and interface contrast
+- Correct form labels
+- Clear and accessible error messages
+- Appropriate accessible names for controls
+- Meaningful alternative text for informative images
+- Decorative images handled appropriately
+- Reduced-motion support
+- Adequate touch target sizes
+- No color-only communication of important information
+- No keyboard traps
+- Clear distinction between links and buttons
+- Accessible mobile navigation
+- Screen-reader-friendly form status messages
+
+Use automated accessibility tools as one part of testing, not as proof of complete accessibility.
+
+Perform manual keyboard checks and inspect the most important interactions.
+
+---
+
+# 13. SECURITY AND PRIVACY
+
+Implement reasonable security practices for the selected architecture.
+
+Requirements:
+
+- HTTPS in production
+- No secrets or private API keys exposed in frontend code
+- Input validation
+- Safe handling of user-submitted content
+- Spam protection for public forms
+- Appropriate security headers where supported
+- Minimal and maintained dependencies
+- No unnecessary user accounts or databases
+- No unnecessary personal data collection
+- Secure handling of integration credentials
+- Clear separation between public configuration and secret configuration
+- No unsafe execution of untrusted input
+- No unnecessary third-party scripts
+- Appropriate privacy information
+
+If using a third-party form service or analytics provider, account for the information it receives and the applicable configuration requirements.
+
+Do not claim the website is completely secure. Document meaningful remaining risks and configuration requirements.
+
+---
+
+# 14. TECHNICAL ARCHITECTURE AND MAINTAINABILITY
+
+## 14.1 Choose the simplest appropriate architecture
+
+Inspect the existing project before deciding how to build it.
+
+A lightweight static frontend with a reliable hosted form integration may be sufficient for the MVP.
+
+Do not introduce a custom backend, database, CMS, user accounts, payment system, or complex framework unless a confirmed requirement justifies it.
+
+If a framework already exists and is suitable, do not rewrite the entire project without a clear reason.
+
+If the project is empty, choose a modern, lightweight, well-supported approach that is appropriate for the development environment and the business's future maintenance needs.
+
+Explain meaningful trade-offs before introducing major architectural changes.
+
+## 14.2 Code quality
+
+- Use reusable components where appropriate.
+- Keep content and configuration organized.
+- Separate language content cleanly.
+- Use descriptive names.
+- Avoid unnecessary abstraction.
+- Avoid duplicated code.
+- Avoid excessive dependencies.
+- Keep the project structure understandable.
+- Make it easy to add genuine projects and update service information.
+- Keep business-specific information easy to find and change.
+- Add comments only when they improve understanding.
+- Handle network and form failures gracefully.
+- Ensure there are no dead-end interactions.
+
+## 14.3 Documentation
+
+Provide an understandable README containing:
+
+- Project overview
+- Technology stack
+- Prerequisites
+- Installation instructions
+- Local development instructions
+- Build instructions
+- Test instructions
+- Configuration requirements
+- Environment variable documentation
+- Form integration setup
+- Deployment instructions
+- How to update services and projects
+- How to update English and Nepali content
+- Known limitations
+- Troubleshooting steps
+
+Never include actual secrets in documentation or example environment files.
+
+Use safe example placeholders where needed.
+
+---
+
+# 15. RESPONSIVE DESIGN
+
+Design and test the complete website across:
+
+- Small mobile phones
+- Large mobile phones
+- Tablets
+- Laptops
+- Desktop screens
+- Wide screens
+
+Check:
+
+- Navigation behavior
+- Heading wrapping
+- Hero layout
+- Service card layout
+- Project cards
+- Contact form
+- Footer
+- Language switch
+- Buttons and touch targets
+- Spacing
+- Overflow
+- Image scaling
+- Long Nepali text
+- Focus states
+
+Do not simply shrink the desktop design.
+
+Adapt layout, spacing, typography, and interactions to each screen size.
+
+Prevent horizontal overflow and ensure the website remains functional on smaller screens.
+
+---
+
+# 16. FEATURE PRIORITIZATION
+
+Use the following priorities to avoid overengineering.
+
+## P0 — Mandatory MVP and launch requirements
+
+The initial production release should include:
+
+1. Professional responsive homepage
+2. SKG ENTERPRISES brand identity and consistent visual system
+3. Clear hero section and primary CTA
+4. Three understandable service groups
+5. Honest projects/portfolio or clearly labeled demonstrations
+6. Working process section
+7. About section with verified information
+8. Functional contact form with actual delivery
+9. Validation, loading, success, error, and retry states
+10. Complete English and Nepali interface
+11. Technical and on-page SEO foundations
+12. Accessible interactions and forms
+13. Performance-conscious implementation
+14. Appropriate security and privacy practices
+15. Functional mobile navigation
+16. Verified links and working buttons
+17. README and configuration documentation
+18. Testing and release checklist
+19. Deployment verification once deployment is separately approved
+
+A missing production credential may prevent a feature from being launch-ready. Document such blockers clearly rather than faking functionality.
+
+## P1 — Valuable improvements after the core MVP
+
+Consider adding these when they provide real value:
+
+- Detailed case-study pages
+- Additional genuine concept demonstrations
+- Service-specific inquiry categories
+- Privacy-conscious conversion measurement
+- More detailed service information
+- Additional useful SEO content
+- Performance monitoring
+- Error monitoring
+- Improved contact workflows
+- More comprehensive testing automation
+
+Do not add all of these automatically. Evaluate their usefulness and maintenance cost.
+
+## P2 — Future enhancements
+
+Possible later additions:
+
+- Smart Project Brief Builder
+- Interactive project-planning assistant
+- Richer interactive demonstrations
+- Dedicated product pages when actual products exist
+- More advanced analytics
+- Additional business integrations
+- More sophisticated inquiry routing
+- AI-powered website features where justified
+
+For the Smart Project Brief Builder, begin with a simple, deterministic questionnaire if that meets the need. Do not introduce AI APIs, backend services, or unnecessary complexity without a demonstrated benefit.
+
+## Explicitly exclude from the initial MVP unless later approved
+
+- User accounts
+- Client dashboards
+- Payment systems
+- Subscription systems
+- Unnecessary databases
+- Custom CMS
+- Complex AI chatbot
+- Heavy 3D graphics
+- Large autoplay videos
+- Manipulative popups
+- Fake testimonials
+- Fake customer statistics
+- Invented project results
+- Complicated navigation
+- Unnecessary newsletters or email automation
+- Features that have no clear user or business purpose
+
+---
+
+# 17. DEVELOPMENT WORKFLOW
+
+Follow this sequence.
+
+## Phase 1: Inspect the existing project
+
+Before editing:
+
+1. Inspect the existing files and directories.
+2. Identify the current framework and dependencies.
+3. Identify the application entry points.
+4. Check for existing logo and visual assets.
+5. Inspect the current design and implementation.
+6. Identify existing functionality.
+7. Identify configuration files and environment variable requirements.
+8. Check whether there are existing tests.
+9. Identify manually created work that must be preserved.
+10. Report important findings and any major risks.
+
+Do not overwrite existing work before inspecting it.
+
+If the project already contains a usable implementation, improve it rather than automatically replacing it.
+
+## Phase 2: Establish the implementation plan
+
+Prepare a concise plan showing:
+
+- Existing state
+- Planned changes
+- Components or sections to create or improve
+- Required integrations
+- Testing approach
+- Unresolved dependencies
+- Launch blockers
+
+Follow this specification as the default direction.
+
+Ask a question only when missing information materially affects correctness, cost, security, functionality, or the final business decision.
+
+Do not repeatedly ask the user to reconfirm requirements already specified in this prompt.
+
+Do not ask the user to perform unnecessary skill tests.
+
+## Phase 3: Build the visual foundation
+
+Implement:
+
+- Brand colors
+- Typography
+- Spacing system
+- Buttons
+- Cards
+- Navigation
+- Layout patterns
+- Focus states
+- Responsive foundations
+- Reusable design components where appropriate
+
+Maintain visual consistency across the site.
+
+## Phase 4: Build the homepage
+
+Implement the sections in the order specified in Section 6.
+
+Keep the content concise and meaningful.
+
+Prioritize the main conversion journey and avoid unnecessary sections.
+
+## Phase 5: Implement real functionality
+
+Implement and verify:
+
+- Navigation
+- Mobile menu
+- Language switching
+- Project links
+- CTA behavior
+- Form validation
+- Form submission
+- Loading and duplicate-submission protection
+- Success and failure states
+- Privacy-related content
+
+Do not treat a visual demonstration as completed functionality.
+
+## Phase 6: SEO, accessibility, security, and performance
+
+Implement the requirements in Sections 9–13.
+
+Resolve obvious problems before proceeding to final acceptance testing.
+
+## Phase 7: Test and refine
+
+Run appropriate checks for the selected stack, including:
+
+- Build
+- Linting, if configured
+- Type checking, if applicable
+- Unit tests, if applicable
+- Integration tests, if applicable
+- Browser interaction tests
+- Responsive checks
+- Accessibility checks
+- Link verification
+- Form delivery checks
+- SEO checks
+- Performance checks
+
+Do not claim that tests passed if they were not actually run.
+
+## Phase 8: Report and prepare for release
+
+Provide a clear final report containing:
+
+1. Features implemented
+2. Files or components changed
+3. Important design decisions
+4. Tests actually performed
+5. Tests that passed
+6. Tests that failed
+7. Tests not performed
+8. Integrations successfully configured
+9. Configuration still required
+10. Production blockers
+11. Known limitations
+12. Steps needed before launch
+13. Suggested next priorities
+
+Do not publish or deploy the website without explicit approval.
+
+---
+
+# 18. RULES FOR AI CODING TOOLS
+
+These instructions apply when using Claude Code, Cursor, Antigravity, or another AI-assisted coding environment.
+
+## 18.1 Preserve existing work
+
+- Inspect before editing.
+- Preserve existing manual edits.
+- Do not overwrite unrelated files.
+- Avoid unnecessary rewrites.
+- Prefer focused, reversible changes.
+- Use version control or a recoverable backup before substantial changes when available.
+- Explain meaningful modifications.
+- Never assume a file is disposable merely because it was generated by AI.
+
+## 18.2 Approval-first workflow
+
+Before a significant, destructive, costly, security-sensitive, or difficult-to-reverse action, explain:
+
+- What you propose to change
+- Why it is needed
+- Which files or systems are affected
+- What risks exist
+- Whether the action is reversible
+
+Then ask:
+
+**"Do you approve this change?"**
+
+Wait for approval before performing that action.
+
+Routine, low-risk implementation steps that clearly follow this specification may proceed without interrupting the workflow unnecessarily.
+
+Never deploy, publish, purchase services, change account permissions, expose private data, or make irreversible production changes without explicit approval.
+
+## 18.3 Protect secrets and infrastructure
+
+- Never expose passwords, private tokens, API keys, or other secrets.
+- Never place private credentials in frontend code.
+- Do not modify unrelated system configuration.
+- Do not delete files or data without authorization.
+- Do not make unapproved production changes.
+- Explain permission prompts in plain language when the user needs to make a decision.
+
+## 18.4 Work transparently
+
+If an integration cannot be completed:
+
+- Explain the reason.
+- Identify the missing information or credentials.
+- Complete the safe work that can be done.
+- Provide the exact remaining setup steps.
+- Do not fabricate success.
+
+Do not stop at an attractive design when the task requires a functional implementation.
+
+---
+
+# 19. FINAL ACCEPTANCE CHECKLIST
+
+The website is ready for production consideration only when the relevant checks below have been completed.
+
+## Brand and design
+
+- [ ] Correct SKG ENTERPRISES brand identity
+- [ ] Consistent premium dark navy, electric blue, cyan, and gold palette
+- [ ] Clear typography and visual hierarchy
+- [ ] Professional, human-friendly design
+- [ ] No unnecessary visual effects
+- [ ] Logo assets handled appropriately
+- [ ] Layout consistent across sections
+
+## User experience
+
+- [ ] Navigation works
+- [ ] Mobile menu works
+- [ ] Primary CTA leads to the intended inquiry flow
+- [ ] Secondary CTA leads to genuine work or the correct section
+- [ ] All visible buttons and links work
+- [ ] No dead links or misleading controls
+- [ ] No horizontal overflow on supported screen sizes
+- [ ] No unnecessary popups or distractions
+
+## Content and credibility
+
+- [ ] Service descriptions are understandable
+- [ ] Current service capabilities are represented honestly
+- [ ] Portfolio content is genuine or clearly labeled as a demonstration
+- [ ] No invented testimonials, metrics, clients, awards, or credentials
+- [ ] Contact details are verified
+- [ ] No unresolved public-facing placeholders
+- [ ] English and Nepali content are complete
+
+## Contact functionality
+
+- [ ] Required fields work
+- [ ] Validation works
+- [ ] Error messages are clear
+- [ ] Loading state works
+- [ ] Duplicate submissions are prevented appropriately
+- [ ] Form submissions reach the configured service
+- [ ] Success appears only after confirmed receipt
+- [ ] Failure and retry paths work
+- [ ] Spam protection is configured appropriately
+- [ ] Privacy information is available
+- [ ] Secrets are not exposed
+
+## SEO
+
+- [ ] Page title is appropriate
+- [ ] Meta description is appropriate
+- [ ] Canonical URL uses the verified production domain
+- [ ] Heading structure is logical
+- [ ] Image alt text is appropriate
+- [ ] Internal links work
+- [ ] Social metadata is configured
+- [ ] Sitemap and robots directives are appropriate
+- [ ] No accidental indexing of development URLs
+- [ ] Structured data contains only verified facts
+- [ ] Search Console setup is documented where appropriate
+
+## Accessibility
+
+- [ ] Keyboard navigation works
+- [ ] Focus indicators are visible
+- [ ] Contrast is checked
+- [ ] Forms have accessible labels
+- [ ] Errors and status messages are accessible
+- [ ] Reduced-motion preference is respected
+- [ ] Screen-reader semantics are appropriate
+- [ ] Mobile controls are usable
+
+## Performance and reliability
+
+- [ ] Images are appropriately optimized
+- [ ] Unnecessary JavaScript and dependencies are avoided
+- [ ] Layout shifts are minimized
+- [ ] No obvious console errors
+- [ ] No broken assets
+- [ ] Network and form failures are handled gracefully
+- [ ] Performance has been tested using appropriate tools
+- [ ] Core Web Vitals goals are measured where possible
+
+## Security and maintenance
+
+- [ ] Production HTTPS is planned or configured
+- [ ] Secrets are stored appropriately
+- [ ] Public input is validated safely
+- [ ] Dependencies are reasonable and maintainable
+- [ ] Privacy practices are documented
+- [ ] Setup instructions exist
+- [ ] Configuration requirements are documented
+- [ ] Known limitations are documented
+- [ ] Recovery or rollback approach is understood
+
+## Release
+
+- [ ] Relevant tests have actually been run
+- [ ] Test results are documented accurately
+- [ ] Production configuration is verified
+- [ ] No unresolved critical launch blockers
+- [ ] Final implementation report is complete
+- [ ] Explicit user approval has been received before publishing or deployment
+
+---
+
+# 20. FINAL IMPLEMENTATION INSTRUCTIONS
+
+Build SKG ENTERPRISES as a premium, modern, human-centered technology business website that combines a distinctive brand identity with excellent usability and practical business functionality.
+
+The final result should balance:
+
+- Visual quality
+- User experience
+- Clear messaging
+- Qualified project inquiries
+- Performance
+- SEO
+- Accessibility
+- Security
+- Maintainability
+- Honest business representation
+
+Keep the initial website focused and lightweight.
+
+Use the finalized dark navy, electric blue, cyan, and gold design direction. Preserve the SKG logo concept. Build the homepage around clear services, genuine or transparently labeled project demonstrations, a concise working process, an honest About section, and a real inquiry workflow.
+
+Support English and Nepali throughout the interface.
+
+Do not add features simply because they seem impressive. Every feature must have a clear user or business purpose.
+
+Do not invent missing information. Do not fake integrations, tests, outcomes, or deployment status.
+
+Do not rewrite an existing project unnecessarily. Inspect it, protect manual work, and make focused changes.
+
+**Your first task is to inspect the current project and report its existing structure, implementation state, available assets, and important blockers. Then propose the shortest sensible path to implement this specification. Do not deploy or publish without explicit approval.**
+
+**Definition of success:** A visitor can understand what SKG ENTERPRISES offers, navigate the website comfortably in English or Nepali, evaluate genuine examples of work, and submit a project inquiry through a verified, functional process—while the website remains fast, accessible, secure-minded, maintainable, and honest about the business's current capabilities.

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "SKG-MVJ6F0Q8-HTEX",
+    "name": "Aayush Sharma",
+    "email": "aayush@example.com",
+    "description": "We need an automated inventory and dispatch portal for our distribution warehouse in Birgunj.",
+    "serviceCategory": "Custom Digital Solutions",
+    "budgetRange": "$3,000 – $10,000 / रु ३ – १० लाख",
+    "expectedTimeline": "Within 1 month",
+    "submittedAt": "2026-10-22T06:44:58.352Z",
+    "status": "in_review",
+    "clientIp": "127.0.0.1",
+    "updatedAt": "2026-10-22T08:02:58.313Z",
+    "notes": [
+      {
+        "id": "NOTE-MVJ97BT5",
+        "text": "Initial technical feasibility checked. Dispatching prototype scope draft to client.",
+        "author": "admin",
+        "createdAt": "2026-10-22T08:02:58.313Z"
+      }
+    ]
+  }
+]

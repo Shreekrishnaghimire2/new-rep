@@ -24,9 +24,13 @@ export default function App() {
     }
   });
 
-  // Current active page state (Multi-page view switching)
+  // Current active page state (Multi-page view switching + direct /admin pathname support)
   const [currentPage, setCurrentPage] = useState<PageId>(() => {
     try {
+      const pathname = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+      if (pathname === 'admin' || pathname.startsWith('admin/')) {
+        return 'admin';
+      }
       const hash = window.location.hash.replace('#', '') as PageId;
       const validPages: PageId[] = [
         'home',
@@ -38,6 +42,9 @@ export default function App() {
         'contact',
         'admin',
       ];
+      if (validPages.includes(pathname as PageId)) {
+        return pathname as PageId;
+      }
       return validPages.includes(hash) ? hash : 'home';
     } catch {
       return 'home';
@@ -58,9 +65,14 @@ export default function App() {
     }
   }, [lang]);
 
-  // Handle hash changes / browser back & forward navigation
+  // Handle URL pathname, hash changes, and browser back/forward navigation
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleUrlChange = () => {
+      const pathname = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+      if (pathname === 'admin' || pathname.startsWith('admin/')) {
+        setCurrentPage('admin');
+        return;
+      }
       const hash = window.location.hash.replace('#', '') as PageId;
       const validPages: PageId[] = [
         'home',
@@ -72,17 +84,32 @@ export default function App() {
         'contact',
         'admin',
       ];
-      if (validPages.includes(hash)) {
+      if (validPages.includes(pathname as PageId)) {
+        setCurrentPage(pathname as PageId);
+      } else if (validPages.includes(hash)) {
         setCurrentPage(hash);
       }
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+
+    window.addEventListener('popstate', handleUrlChange);
+    window.addEventListener('hashchange', handleUrlChange);
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+      window.removeEventListener('hashchange', handleUrlChange);
+    };
   }, []);
 
   const navigateToPage = (page: PageId) => {
     setCurrentPage(page);
-    window.location.hash = page;
+    const targetPath = page === 'home' ? '/' : `/${page}`;
+    try {
+      if (window.location.pathname !== targetPath) {
+        window.history.pushState({ page }, '', targetPath);
+      }
+    } catch (e) {
+      console.debug('History pushState fallback:', e);
+    }
+    window.location.hash = page === 'home' ? '' : page;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

@@ -153,45 +153,23 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+              className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
               aria-expanded={mobileMenuOpen}
               aria-label="Toggle Page Menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-cyan-400" /> : <Menu className="w-5 h-5" />}
             </button>
-          </div>
-        </div>
-
-        {/* Secondary Mobile/Tablet Horizontal Scrolling Navigation Strip */}
-        <div className="md:hidden pb-2.5 pt-0.5 overflow-x-auto no-scrollbar border-t border-slate-800/60">
-          <div className="flex items-center gap-1.5 min-w-max">
-            {navItems.map((item) => {
-              const isActive = currentPage === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handlePageClick(item.id)}
-                  className={`flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap ${
-                    isActive
-                      ? 'bg-cyan-500/20 border border-cyan-400/50 text-cyan-300 font-semibold'
-                      : 'bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white'
-                  }`}
-                >
-                  <span>{item.icon}</span>
-                  <span>{item.label}</span>
-                </button>
-              );
-            })}
           </div>
         </div>
       </div>
 
       {/* Expanded Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[110px] bg-[#071426]/98 backdrop-blur-2xl z-50 p-6 overflow-y-auto border-t border-slate-800 shadow-2xl">
-          <div className="flex flex-col gap-2">
-            <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 pb-2 mb-2 border-b border-slate-800">
-              Select Page View
+        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-[#071426]/98 backdrop-blur-2xl z-50 p-5 overflow-y-auto border-t border-slate-800 shadow-2xl flex flex-col justify-between">
+          <div className="flex flex-col gap-1.5">
+            <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 pb-2 mb-1 border-b border-slate-800 flex items-center justify-between">
+              <span>Navigation Directory</span>
+              <span className="text-cyan-400 font-mono">SKG ENTERPRISES</span>
             </div>
 
             {navItems.map((item) => {
@@ -200,44 +178,66 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handlePageClick(item.id)}
-                  className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                  className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                     isActive
-                      ? 'bg-gradient-to-r from-[#087BFF]/20 to-[#21D4F4]/20 border border-cyan-400/50 text-white'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
+                      ? 'bg-gradient-to-r from-[#087BFF]/25 to-[#21D4F4]/20 border border-cyan-400/50 text-white'
+                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60 border border-transparent'
                   }`}
                 >
-                  <div className="flex items-center gap-2.5">
+                  <div className="flex items-center gap-3">
                     <span className={isActive ? 'text-cyan-400' : 'text-slate-400'}>
                       {item.icon}
                     </span>
                     <span>{item.label}</span>
                   </div>
                   {isActive && (
-                    <span className="text-[10px] font-mono text-cyan-400 font-bold uppercase">
-                      Active
+                    <span className="text-[10px] font-mono text-cyan-300 font-bold uppercase bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-700/50">
+                      Current
                     </span>
                   )}
                 </button>
               );
             })}
 
-            <div className="pt-4 mt-2 border-t border-slate-800 flex flex-col gap-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenEstimator();
-                }}
-                className="w-full text-center py-2.5 text-xs font-semibold text-slate-300 bg-slate-900 border border-slate-700 rounded-xl hover:text-white"
-              >
-                {t.nav.estimator}
-              </button>
-              <button
-                onClick={() => handlePageClick('contact')}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#087BFF] to-[#21D4F4] rounded-xl shadow-md"
-              >
-                <span>{t.nav.cta}</span>
-                <ArrowUpRight className="w-4 h-4" />
-              </button>
+            {/* Direct Admin Link in Drawer */}
+            <button
+              onClick={() => handlePageClick('admin')}
+              className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold transition-all ${
+                currentPage === 'admin'
+                  ? 'bg-amber-500/20 border border-amber-400/60 text-amber-300'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-800/60 border border-transparent'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                <Lock className="w-3.5 h-3.5 text-[#FFAA18]" />
+                <span>Admin Portal (/admin)</span>
+              </div>
+              <span className="text-[10px] font-mono text-amber-400 px-2 py-0.5 rounded bg-amber-950/60 border border-amber-800/50">
+                Staff Only
+              </span>
+            </button>
+          </div>
+
+          <div className="pt-4 mt-4 border-t border-slate-800 flex flex-col gap-2.5">
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenEstimator();
+              }}
+              className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold text-slate-200 bg-slate-900 border border-slate-700 rounded-xl hover:text-white"
+            >
+              <Compass className="w-3.5 h-3.5 text-[#FFAA18]" />
+              <span>{t.nav.estimator}</span>
+            </button>
+            <button
+              onClick={() => handlePageClick('contact')}
+              className="w-full inline-flex items-center justify-center gap-2 py-3 text-sm font-semibold text-white bg-gradient-to-r from-[#087BFF] to-[#21D4F4] rounded-xl shadow-md"
+            >
+              <span>{t.nav.cta}</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </button>
+            <div className="text-center text-[10px] text-slate-500 pt-1">
+              Bhainsepati, Lalitpur, Nepal · info@skgenterprises.com
             </div>
           </div>
         </div>

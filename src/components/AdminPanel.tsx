@@ -401,7 +401,7 @@ export const AdminPanel: React.FC<AdminPanelProps> = ({ lang, onNavigateHome }) 
   // 1. RENDER LOGIN SCREEN IF NOT AUTHENTICATED
   if (!token) {
     return (
-      <div className="py-16 px-4 sm:px-6 lg:px-8 max-w-lg mx-auto animate-in fade-in duration-200">
+      <div className="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-lg mx-auto animate-in fade-in duration-200">
         <div className="text-center mb-8">
           <img
             src="/logo.png"

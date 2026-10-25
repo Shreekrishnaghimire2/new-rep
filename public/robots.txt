@@ -1,4 +1,4 @@
-# robots.txt for SKG ENTERPRISES (https://skgenterprises.com)
+# robots.txt for SKG ENTERPRISES (https://ghimireshreekrishna.com.np)
 # Optimized for Google Search #1 ranking & AI Model Citations (ChatGPT, Perplexity, Claude, Gemini)
 
 User-agent: *
@@ -59,5 +59,5 @@ User-agent: Bytespider
 Allow: /
 
 # Sitemap & LLM Specification Indexes
-Sitemap: https://skgenterprises.com/sitemap.xml
-llms-txt: https://skgenterprises.com/llms.txt
+Sitemap: https://ghimireshreekrishna.com.np/sitemap.xml
+llms-txt: https://ghimireshreekrishna.com.np/llms.txt

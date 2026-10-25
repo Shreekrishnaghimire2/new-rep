@@ -11,7 +11,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
   const t = translations[lang];
 
   return (
-    <section id="about" className="py-8 sm:py-14 lg:py-20 bg-[#071426] relative border-t border-slate-800/80">
+    <section id="about" className="py-8 sm:py-14 lg:py-20 bg-[#071426] relative border-t border-slate-800/80 w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Authentic Brand Narrative */}

@@ -201,7 +201,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   };
 
   return (
-    <section id="contact" className="py-8 sm:py-14 lg:py-20 bg-[#061120] relative border-t border-slate-800/80">
+    <section id="contact" className="py-8 sm:py-14 lg:py-20 bg-[#061120] relative border-t border-slate-800/80 w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

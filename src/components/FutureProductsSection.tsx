@@ -16,7 +16,7 @@ export const FutureProductsSection: React.FC<FutureProductsSectionProps> = ({
   const t = translations[lang];
 
   return (
-    <section id="products" className="py-8 sm:py-14 lg:py-20 bg-[#061120] relative border-t border-slate-800/80">
+    <section id="products" className="py-8 sm:py-14 lg:py-20 bg-[#061120] relative border-t border-slate-800/80 w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#0B1B32] to-[#071426] border border-cyan-500/20 relative overflow-hidden">
           {/* Subtle glow */}

@@ -12,6 +12,7 @@ import {
   GitPullRequest,
   Info,
   MessageSquare,
+  Newspaper,
 } from 'lucide-react';
 import { Language, PageId } from '../types';
 import { translations } from '../translations';
@@ -30,10 +31,10 @@ export const Hero: React.FC<HeroProps> = ({
   const t = translations[lang];
 
   return (
-    <section className="relative pt-5 pb-10 sm:pt-8 sm:pb-14 lg:pt-12 lg:pb-18 overflow-hidden">
+    <section className="relative pt-5 pb-10 sm:pt-8 sm:pb-14 lg:pt-12 lg:pb-18 overflow-hidden w-full max-w-full">
       {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-tr from-[#087BFF]/15 via-[#21D4F4]/10 to-transparent blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-10 right-10 w-72 h-72 bg-[#FFAA18]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] h-[220px] sm:h-[300px] bg-gradient-to-tr from-[#087BFF]/15 via-[#21D4F4]/10 to-transparent blur-2xl sm:blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-10 right-4 sm:right-10 w-44 sm:w-72 h-44 sm:h-72 bg-[#FFAA18]/5 rounded-full blur-2xl sm:blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 2-column Hero Grid */}
@@ -271,6 +272,13 @@ export const Hero: React.FC<HeroProps> = ({
                 desc: 'Our authentic story, core engineering pillars, and Lalitpur headquarters details.',
                 icon: <Info className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFAA18]" />,
                 badge: 'Authentic Story',
+              },
+              {
+                id: 'news' as PageId,
+                title: t.nav.news,
+                desc: 'Official company press releases, engineering breakthroughs, and milestone announcements.',
+                icon: <Newspaper className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />,
+                badge: 'Press & Updates',
               },
               {
                 id: 'contact' as PageId,

@@ -1,0 +1,63 @@
+# robots.txt for SKG ENTERPRISES (https://skgenterprises.com)
+# Optimized for Google Search #1 ranking & AI Model Citations (ChatGPT, Perplexity, Claude, Gemini)
+
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+
+# Search Engine Web Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Generative AI, LLM & Semantic Search Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Sitemap & LLM Specification Indexes
+Sitemap: https://skgenterprises.com/sitemap.xml
+llms-txt: https://skgenterprises.com/llms.txt

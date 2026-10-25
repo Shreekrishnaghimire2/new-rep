@@ -1,6 +1,19 @@
 export type Language = 'en' | 'ne';
 
-export type PageId = 'home' | 'services' | 'products' | 'projects' | 'process' | 'about' | 'contact' | 'admin';
+export type PageId = 'home' | 'services' | 'products' | 'projects' | 'process' | 'about' | 'news' | 'contact' | 'admin';
+
+export interface CompanyNews {
+  id: string;
+  title: string;
+  nepaliTitle?: string;
+  category: string;
+  summary: string;
+  nepaliSummary?: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  pinned?: boolean;
+}
 
 export type ServiceCategory = 'all' | 'web' | 'ai' | 'custom';
 

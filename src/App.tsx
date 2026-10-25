@@ -7,6 +7,7 @@ import { FutureProductsSection } from './components/FutureProductsSection';
 import { ProcessSection } from './components/ProcessSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { AboutSection } from './components/AboutSection';
+import { NewsSection } from './components/NewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProjectEstimatorModal } from './components/ProjectEstimatorModal';
@@ -39,6 +40,7 @@ export default function App() {
         'projects',
         'process',
         'about',
+        'news',
         'contact',
         'admin',
       ];
@@ -81,6 +83,7 @@ export default function App() {
         'projects',
         'process',
         'about',
+        'news',
         'contact',
         'admin',
       ];
@@ -113,6 +116,49 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Keyboard secret trigger: typing "admin" anywhere on site (outside text inputs) opens the admin panel!
+  useEffect(() => {
+    let keyBuffer = '';
+    let lastKeyTime = Date.now();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const activeEl = document.activeElement;
+      const isInput =
+        activeEl instanceof HTMLInputElement ||
+        activeEl instanceof HTMLTextAreaElement ||
+        (activeEl as HTMLElement)?.isContentEditable;
+
+      // Also support shortcut: Ctrl+Alt+A or Cmd+Alt+A
+      if ((e.ctrlKey || e.metaKey) && e.altKey && (e.key === 'a' || e.key === 'A')) {
+        e.preventDefault();
+        navigateToPage('admin');
+        return;
+      }
+
+      if (isInput) return;
+
+      const now = Date.now();
+      if (now - lastKeyTime > 2500) {
+        keyBuffer = '';
+      }
+      lastKeyTime = now;
+
+      if (e.key && e.key.length === 1) {
+        keyBuffer += e.key.toLowerCase();
+        if (keyBuffer.length > 12) {
+          keyBuffer = keyBuffer.slice(-12);
+        }
+        if (keyBuffer.endsWith('admin')) {
+          keyBuffer = '';
+          navigateToPage('admin');
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   const handleSelectService = (serviceName: string) => {
     setPreselectedService(serviceName);
     navigateToPage('contact');
@@ -141,12 +187,13 @@ export default function App() {
     projects: { en: 'Projects & Interactive Prototypes', ne: 'परियोजना तथा प्रोटोटाइप' },
     process: { en: 'Working Methodology', ne: 'हाम्रो कार्यप्रक्रिया' },
     about: { en: 'About SKG Enterprises', ne: 'हाम्रो परिचय' },
+    news: { en: 'Company News & Updates', ne: 'कम्पनी समाचार तथा सूचना' },
     contact: { en: 'Project Inquiry & Contact', ne: 'सम्पर्क तथा परियोजना सोधपुछ' },
     admin: { en: 'Admin Management Portal', ne: 'प्रशासक व्यवस्थापन पोर्टल' },
   };
 
   return (
-    <div className="min-h-screen bg-[#071426] text-slate-100 flex flex-col font-sans selection:bg-[#087BFF]/30 selection:text-white">
+    <div className="min-h-screen bg-[#071426] text-slate-100 flex flex-col font-sans selection:bg-[#087BFF]/30 selection:text-white w-full max-w-full overflow-x-hidden relative">
       {/* Top Navigation Bar with active page tabs */}
       <Navbar
         currentPage={currentPage}
@@ -158,7 +205,7 @@ export default function App() {
 
       {/* Breadcrumb banner on sub-pages */}
       {currentPage !== 'home' && (
-        <div className="bg-[#050E1B] border-b border-slate-800/80 py-3">
+        <div className="bg-[#050E1B] border-b border-slate-800/80 py-3 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 text-slate-400">
               <button
@@ -182,7 +229,7 @@ export default function App() {
       )}
 
       {/* Main Container - Displays ONLY the content for the selected page */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {currentPage === 'home' && (
           <Hero
             lang={lang}
@@ -218,6 +265,10 @@ export default function App() {
 
         {currentPage === 'about' && (
           <AboutSection lang={lang} />
+        )}
+
+        {currentPage === 'news' && (
+          <NewsSection lang={lang} />
         )}
 
         {currentPage === 'contact' && (
@@ -260,3 +311,4 @@ export default function App() {
     </div>
   );
 }
+

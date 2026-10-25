@@ -1,0 +1,32 @@
+# SKG ENTERPRISES
+
+> SKG ENTERPRISES is a premier digital engineering firm, custom software company, and AI automation consultancy founded by Shreekrishna Ghimire. Headquartered in Bhainsepati, Lalitpur, Bagmati Province, Nepal (27.6588° N, 85.3082° E), SKG Enterprises delivers modern web applications, intelligent automation systems, and enterprise software for organizations across Nepal and worldwide.
+
+## Company Overview
+- **Legal Name**: SKG ENTERPRISES
+- **Founder & Principal Engineer**: Shreekrishna Ghimire
+- **Headquarters**: Bhainsepati, Lalitpur, Bagmati Province 44700, Nepal
+- **Geographic Coordinates**: 27.6588° N, 85.3082° E
+- **Official Website**: https://skgenterprises.com
+- **Official Email**: hello@skgenterprises.com
+- **Operating Philosophy**: "Turning Ideas into Technology for a Better Tomorrow" (विचारहरूलाई प्रविधिमा बदल्दै, उन्नत भविष्यको लागि). Transparent milestone-based billing, zero vendor lock-in, and production-grade engineering.
+
+## Core Capabilities & Services
+- **Web & Cloud Architecture**: High-speed, responsive, server-rendered and single-page applications built on React, TypeScript, Node.js, and modern cloud platforms with WCAG 2.2 AA accessibility and international SEO.
+- **AI Automation & Intelligent Workflows**: Grounded LLM systems, generative assistant integration, document comprehension pipelines, and business workflow automations.
+- **Custom Business Portals & ERP**: Tailored operational tools, inventory trackers, multi-branch management systems, and VAT/TDS compliance engines tailored for Nepal and international regulations.
+- **Mobile Application Engineering**: Native-feel cross-platform mobile experiences for iOS and Android with offline-first local synchronization.
+- **Interactive Concept Lab**: R&D prototypes addressing regional challenges, including Mountain Logistics Telemetry and Nepal Inland Tax ledgers.
+
+## Verified Site Pages & Endpoints
+- [Home](https://skgenterprises.com/): Official company portal, value proposition, and technological capabilities.
+- [Services](https://skgenterprises.com/services): 6 core engineering offerings with explicit business benefits and tangible deliverables.
+- [Projects](https://skgenterprises.com/projects): Production case studies and interactive simulators (Himalaya Logistics Dispatcher, Nepal VAT Ledger).
+- [Products](https://skgenterprises.com/products): Concept Lab and upcoming R&D digital tools (FlowEngine, DocuLex AI).
+- [Process](https://skgenterprises.com/process): 4-phase agile delivery framework (Discover, Plan, Build, Launch & Improve).
+- [About](https://skgenterprises.com/about): Authentic founding story, engineering principles, and physical headquarters location in Lalitpur.
+- [News](https://skgenterprises.com/news): Official press releases, project milestones, and tech announcements from SKG Enterprises.
+- [Contact](https://skgenterprises.com/contact): Direct project inquiry submission with tracking reference ID verification.
+
+## Optional Resources
+- [Full LLM Knowledge Context](https://skgenterprises.com/llms-full.txt): Deep technical overview, architecture specifications, and complete service catalog for AI research crawlers.

@@ -32,8 +32,84 @@ export interface Inquiry {
   notes?: InquiryNote[];
 }
 
+export interface CompanyNews {
+  id: string;
+  title: string;
+  nepaliTitle?: string;
+  category: string;
+  summary: string;
+  nepaliSummary?: string;
+  content: string;
+  author: string;
+  publishedAt: string;
+  pinned?: boolean;
+}
+
 // Memory & local file backed inquiry storage
 const INQUIRIES_FILE = path.join(__dirname, '.inquiries_store.json');
+const NEWS_FILE = path.join(__dirname, '.news_store.json');
+
+const INITIAL_NEWS: CompanyNews[] = [
+  {
+    id: 'NEWS-2026-001',
+    title: 'SKG ENTERPRISES Unveils Dedicated AI & Web Systems Hub in Bhainsepati, Lalitpur',
+    nepaliTitle: 'एसकेजी इन्टरप्राइजेजद्वारा भैंसेपाटी, ललितपुरमा एआई तथा वेब प्रणाली हबको अनावरण',
+    category: 'Company News',
+    summary: 'Expanding digital capabilities to provide direct engineering consultancy, production-grade web systems, and intelligent workflow automation for businesses across Nepal and global markets.',
+    nepaliSummary: 'नेपाल तथा अन्तर्राष्ट्रिय बजारका व्यवसायहरूका लागि आधुनिक वेब प्रणाली तथा बौद्धिक स्वचालन परामर्श सेवा विस्तार।',
+    content: 'SKG ENTERPRISES officially announces the operational expansion of its technology hub located in Bhainsepati, Lalitpur, Bagmati Province. Under the technical leadership of founder Shreekrishna Ghimire, the firm delivers specialized engineering in full-stack cloud applications, high-performance web architecture, and localized AI automation pipelines. Organizations interested in exploratory scoping can submit verified inquiries directly through the portal.',
+    author: 'Editorial Desk',
+    publishedAt: '2026-10-25T08:00:00.000Z',
+    pinned: true,
+  },
+  {
+    id: 'NEWS-2026-002',
+    title: 'Launch of Himalayan Logistics & Fleet Telemetry Simulator for Mountain Transport',
+    nepaliTitle: 'हिमाली ढुवानी तथा फ्लीट टेलिमेट्री सिम्युलेटर सार्वजनिक',
+    category: 'Release',
+    summary: 'An interactive operational simulator calculating real-time mountain corridor payload restrictions, elevation gradients, and fuel burn between Kathmandu, Pokhara, and Mustang.',
+    nepaliSummary: 'काठमाडौँ, पोखरा र मुस्ताङबीचको हिमाली सडक उचाइ तथा इन्धन खपत मापन गर्ने अन्तरक्रियात्मक सिम्युलेटर।',
+    content: 'Transportation in Nepal requires engineering tailored to high-altitude topography. The new SKG Logistics Simulator models mountain transit corridors with verified weight ratings and fuel estimates. The prototype demonstrates SKG\'s commitment to solving real-world regional challenges with software.',
+    author: 'Engineering Team',
+    publishedAt: '2026-10-20T10:30:00.000Z',
+    pinned: true,
+  },
+  {
+    id: 'NEWS-2026-003',
+    title: 'Nepal Inland Revenue (IRD) VAT & Tax Withholding Module Enters Pilot Testing',
+    nepaliTitle: 'नेपाल आन्तरिक राजस्व १३% भ्याट तथा टीडीएस मोड्युल परीक्षणमा',
+    category: 'Announcement',
+    summary: 'Automated 13% VAT calculation and tiered TDS deduction engine tailored to commercial billing practices and compliance standards in Nepal.',
+    nepaliSummary: 'नेपालको वाणिज्य नियम अनुरूप १३% मूल्य अभिवृद्धि कर तथा टीडीएस गणना गर्ने स्वचालन प्रणाली।',
+    content: 'Designed to eliminate manual bookkeeping discrepancies, the SKG Tax Ledger module accurately computes 13% VAT alongside statutory TDS brackets (1.5%, 10%, 15%) for goods, services, and high-bracket contracting.',
+    author: 'Solutions Team',
+    publishedAt: '2026-10-15T09:15:00.000Z',
+    pinned: false,
+  },
+];
+
+function loadNews(): CompanyNews[] {
+  try {
+    if (fs.existsSync(NEWS_FILE)) {
+      const data = fs.readFileSync(NEWS_FILE, 'utf-8');
+      return JSON.parse(data);
+    } else {
+      fs.writeFileSync(NEWS_FILE, JSON.stringify(INITIAL_NEWS, null, 2), 'utf-8');
+      return INITIAL_NEWS;
+    }
+  } catch (err) {
+    console.error('Could not load news store:', err);
+  }
+  return INITIAL_NEWS;
+}
+
+function saveNews(newsList: CompanyNews[]) {
+  try {
+    fs.writeFileSync(NEWS_FILE, JSON.stringify(newsList, null, 2), 'utf-8');
+  } catch (err) {
+    console.error('Could not save news store:', err);
+  }
+}
 
 function loadInquiries(): Inquiry[] {
   try {
@@ -53,6 +129,11 @@ function saveInquiries(inquiries: Inquiry[]) {
   } catch (err) {
     console.error('Could not save inquiry store:', err);
   }
+}
+
+function cleanNoteText(str: string): string {
+  if (!str) return '';
+  return str.trim();
 }
 
 // Simple in-memory rate limiter for public submissions
@@ -397,6 +478,73 @@ async function startServer() {
     });
   });
 
+  // Dedicated Add Note Endpoint
+  app.post('/api/admin/inquiries/:id/notes', requireAdminAuth, (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { text } = req.body;
+    const adminUser = (req as any).adminUser || 'Admin';
+
+    if (!text || typeof text !== 'string' || !text.trim()) {
+      return res.status(400).json({ success: false, error: 'Note text cannot be empty.' });
+    }
+
+    const inquiries = loadInquiries();
+    const index = inquiries.findIndex((i) => i.id.toUpperCase() === id.toUpperCase());
+
+    if (index === -1) {
+      return res.status(404).json({ success: false, error: 'Inquiry not found.' });
+    }
+
+    const inquiry = inquiries[index];
+    if (!inquiry.notes) inquiry.notes = [];
+
+    const newNote: InquiryNote = {
+      id: `NOTE-${Date.now().toString(36).toUpperCase()}`,
+      text: cleanNoteText(text),
+      author: adminUser,
+      createdAt: new Date().toISOString(),
+    };
+
+    inquiry.notes.push(newNote);
+    inquiry.updatedAt = new Date().toISOString();
+    inquiries[index] = inquiry;
+    saveInquiries(inquiries);
+
+    console.log(`[SKG Admin] Added internal note to inquiry ${inquiry.id}`);
+
+    return res.status(201).json({
+      success: true,
+      inquiry,
+      note: newNote,
+      message: 'Internal note saved successfully.',
+    });
+  });
+
+  // Dedicated Delete Note Endpoint
+  app.delete('/api/admin/inquiries/:id/notes/:noteId', requireAdminAuth, (req: Request, res: Response) => {
+    const { id, noteId } = req.params;
+    const inquiries = loadInquiries();
+    const index = inquiries.findIndex((i) => i.id.toUpperCase() === id.toUpperCase());
+
+    if (index === -1) {
+      return res.status(404).json({ success: false, error: 'Inquiry not found.' });
+    }
+
+    const inquiry = inquiries[index];
+    if (!inquiry.notes) inquiry.notes = [];
+
+    inquiry.notes = inquiry.notes.filter((n) => n.id !== noteId);
+    inquiry.updatedAt = new Date().toISOString();
+    inquiries[index] = inquiry;
+    saveInquiries(inquiries);
+
+    return res.json({
+      success: true,
+      inquiry,
+      message: 'Internal note deleted.',
+    });
+  });
+
   // Delete / Archive an inquiry
   app.delete('/api/admin/inquiries/:id', requireAdminAuth, (req: Request, res: Response) => {
     const { id } = req.params;
@@ -415,6 +563,90 @@ async function startServer() {
     return res.json({
       success: true,
       message: `Inquiry ${id} was deleted successfully.`,
+    });
+  });
+
+  // ==========================================
+  // NEWS & ANNOUNCEMENTS API ROUTES
+  // ==========================================
+
+  // Public: Get all published news / announcements
+  app.get('/api/news', (_req: Request, res: Response) => {
+    const newsList = loadNews();
+    // Sort: pinned first, then newer publishedAt
+    const sorted = [...newsList].sort((a, b) => {
+      if (a.pinned && !b.pinned) return -1;
+      if (!a.pinned && b.pinned) return 1;
+      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+    });
+
+    res.json({
+      success: true,
+      news: sorted,
+    });
+  });
+
+  // Admin: Publish new news / announcement
+  app.post('/api/admin/news', requireAdminAuth, (req: Request, res: Response) => {
+    const { title, nepaliTitle, category, summary, nepaliSummary, content, pinned } = req.body;
+    const adminUser = (req as any).adminUser || 'Admin Editorial';
+
+    if (!title || typeof title !== 'string' || !title.trim()) {
+      return res.status(400).json({ success: false, error: 'Article title is required.' });
+    }
+
+    if (!summary || typeof summary !== 'string' || !summary.trim()) {
+      return res.status(400).json({ success: false, error: 'Article summary is required.' });
+    }
+
+    if (!content || typeof content !== 'string' || !content.trim()) {
+      return res.status(400).json({ success: false, error: 'Article content is required.' });
+    }
+
+    const newsList = loadNews();
+    const newArticle: CompanyNews = {
+      id: `NEWS-${Date.now().toString(36).toUpperCase()}`,
+      title: title.trim(),
+      nepaliTitle: nepaliTitle && typeof nepaliTitle === 'string' ? nepaliTitle.trim() : undefined,
+      category: category && typeof category === 'string' ? category.trim() : 'Company News',
+      summary: summary.trim(),
+      nepaliSummary: nepaliSummary && typeof nepaliSummary === 'string' ? nepaliSummary.trim() : undefined,
+      content: content.trim(),
+      author: adminUser,
+      publishedAt: new Date().toISOString(),
+      pinned: Boolean(pinned),
+    };
+
+    newsList.unshift(newArticle);
+    saveNews(newsList);
+
+    console.log(`[SKG News] Published article: "${newArticle.title}" (ID: ${newArticle.id})`);
+
+    return res.status(201).json({
+      success: true,
+      news: newArticle,
+      message: 'News published successfully.',
+    });
+  });
+
+  // Admin: Delete news / announcement
+  app.delete('/api/admin/news/:id', requireAdminAuth, (req: Request, res: Response) => {
+    const { id } = req.params;
+    let newsList = loadNews();
+    const existing = newsList.find((n) => n.id.toUpperCase() === id.toUpperCase());
+
+    if (!existing) {
+      return res.status(404).json({ success: false, error: 'Article not found.' });
+    }
+
+    newsList = newsList.filter((n) => n.id.toUpperCase() !== id.toUpperCase());
+    saveNews(newsList);
+
+    console.log(`[SKG News] Deleted article: ${id}`);
+
+    return res.json({
+      success: true,
+      message: `Article ${id} deleted successfully.`,
     });
   });
 

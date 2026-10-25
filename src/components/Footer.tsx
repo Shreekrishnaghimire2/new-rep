@@ -98,18 +98,17 @@ export const Footer: React.FC<FooterProps> = ({
             </button>
             <span aria-hidden="true" className="text-slate-700 hidden sm:inline">·</span>
             <button
+              onClick={() => handleNav('news')}
+              className="hover:text-cyan-400 transition-colors py-1"
+            >
+              {t.nav.news}
+            </button>
+            <span aria-hidden="true" className="text-slate-700 hidden sm:inline">·</span>
+            <button
               onClick={() => handleNav('contact')}
               className="hover:text-cyan-400 transition-colors py-1"
             >
               {t.nav.contact}
-            </button>
-            <span aria-hidden="true" className="text-slate-700 hidden sm:inline">·</span>
-            <button
-              onClick={() => handleNav('admin')}
-              className="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 transition-colors py-1 font-semibold"
-            >
-              <Lock className="w-3 h-3 text-[#FFAA18]" />
-              <span>{lang === 'ne' ? 'प्रशासक पोर्टल (/admin)' : 'Admin Portal (/admin)'}</span>
             </button>
           </nav>
         </div>
@@ -158,8 +157,15 @@ export const Footer: React.FC<FooterProps> = ({
             >
               {t.footer.terms}
             </button>
-            <span aria-hidden="true" className="text-slate-700">·</span>
             <span className="text-slate-400">{t.footer.builtWith}</span>
+            <button
+              onClick={() => handleNav('admin')}
+              className="text-slate-700 hover:text-slate-500 transition-colors p-1 rounded inline-flex items-center ml-1"
+              title="Staff Portal (type 'admin' anywhere to open)"
+              aria-label="Staff Portal"
+            >
+              <Lock className="w-2.5 h-2.5" />
+            </button>
           </div>
 
           <button

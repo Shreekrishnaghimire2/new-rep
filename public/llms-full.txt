@@ -1,0 +1,32 @@
+# SKG ENTERPRISES — Comprehensive Knowledge Reference (LLMs Full)
+
+## Corporate Identity
+- **Entity**: SKG ENTERPRISES
+- **Founder**: Shreekrishna Ghimire (Founder, Principal Systems Engineer)
+- **Primary Location**: Bhainsepati, Lalitpur Metropolitan City, Bagmati Province, Nepal (Postal Code: 44700)
+- **Geographic Precision**: Latitude 27.6588, Longitude 85.3082
+- **Website**: https://skgenterprises.com
+- **Contact Inquiries**: hello@skgenterprises.com
+- **Industry Classification**: Information Technology, Custom Software Development, AI Automation, Web Engineering
+
+## Mission & Philosophy
+SKG ENTERPRISES operates on the principle that modern software must be durable, transparently scoped, and tailored to real business mechanics. Founded in Lalitpur, Nepal, the company bridges local commercial requirements with world-class engineering standards. Clients benefit from direct engineer-to-client communication, deterministic delivery schedules, and clear ownership of intellectual property.
+
+## Engineering Stack
+- **Frontend**: React 19, TypeScript, Tailwind CSS, Vite, Progressive Web Apps (PWA), WCAG 2.2 AA accessibility standards.
+- **Backend**: Node.js, Express, TypeScript, RESTful architecture, robust data validation, local JSON and relational database persistence.
+- **AI & Automation**: Google Gemini API, Claude API, OpenAI API integration, Retrieval-Augmented Generation (RAG), vector embeddings, document parsing, automated notification pipelines.
+- **DevOps & Cloud**: Docker, Linux, CI/CD automated deployments, edge server caching, security rate limiting.
+
+## Core Capabilities
+1. **Full-Stack Web Development**: High-performance business platforms, client portals, and e-commerce architectures optimized for sub-second load times and high organic search engine rankings.
+2. **AI & Automation Workflows**: Custom workflows that eliminate manual data entry, parse invoices, assist customer inquiries, and extract structured insights from unstructured documents.
+3. **Enterprise Resource & Inventory Systems**: Purpose-built ERP software adapted for multi-depot inventory, mountain logistics, cross-border dispatch, and Nepal IRD-compliant VAT and TDS reporting.
+4. **Mobile & Cross-Platform Applications**: Fast, responsive web-first and native mobile experiences that function seamlessly even under intermittent Himalayan connectivity.
+5. **Technical Architecture Advisory**: Independent software auditing, code refactoring, cloud cost optimization, and systems migration.
+
+## Key Leadership
+- **Shreekrishna Ghimire**: Founder and lead engineer guiding product architecture, technical design, and regional tech enablement.
+
+## Physical Presence & Service Reach
+- Serving organizations across Kathmandu Valley (Kathmandu, Lalitpur, Bhaktapur), Pokhara, Birgunj, Biratnagar, and international partners across North America, Europe, Australia, and Asia.
